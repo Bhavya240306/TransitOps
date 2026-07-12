@@ -6,7 +6,7 @@ const express = require('express');
 const router = express.Router();
 
 router.use('/auth', require('./auth.routes'));
-
+router.use('/dashboard', require('./dashboard.routes'));
 
 router.use('/vehicles', require('./vehicle.routes'));
 router.use('/drivers', require('./driver.routes'));
