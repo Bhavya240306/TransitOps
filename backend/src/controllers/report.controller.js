@@ -1,3 +1,4 @@
+const { Parser } = require("json2csv");
 const reportService = require("../services/report.services");
 const { success } = require("../utils/apiResponse");
 
@@ -9,13 +10,6 @@ async function getReports(req, res, next) {
         next(err);
     }
 }
-
-module.exports = {
-    getReports,
-};
-
-const { Parser } = require("json2csv");
-const reportService = require("../services/report.services");
 
 async function exportCsv(req, res, next) {
   try {
@@ -29,3 +23,8 @@ async function exportCsv(req, res, next) {
     next(err);
   }
 }
+
+module.exports = {
+    getReports,
+    exportCsv,
+};
