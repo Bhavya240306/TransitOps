@@ -11,11 +11,10 @@ refresh
 
 const[data,setData]=useState({
 
-registrationNumber:"",
-
-model:"",
-
-maxLoadCapacity:""
+registrationNumber: "",
+make: "",
+model: "",
+capacityKg: ""
 
 });
 

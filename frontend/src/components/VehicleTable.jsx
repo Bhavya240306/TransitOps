@@ -63,7 +63,7 @@ className="border-b"
 
 <td>
 
-{vehicle.maxLoadCapacity} kg
+{vehicle.capacityKg} kg
 
 </td>
 
