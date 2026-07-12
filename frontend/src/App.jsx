@@ -1,55 +1,40 @@
-import AuthProvider from "./context/AuthContext";
-
-import {Routes,Route} from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 
 import Login from "./pages/Login";
-
 import Dashboard from "./pages/Dashboard";
-
 import Vehicles from "./pages/Vehicles";
-
 import Drivers from "./pages/Drivers";
-
 import Trips from "./pages/Trips";
-
-import Reports from "./pages/Reports";
-
 import Maintenance from "./pages/Maintenance";
+import Reports from "./pages/Reports";
 
 import DashboardLayout from "./layouts/DashboardLayout";
 
-function App(){
+function App() {
+  return (
+    <>
+      <Toaster position="top-right" />
 
-return(
+      <Routes>
+        {/* Login */}
+        <Route path="/" element={<Login />} />
 
-<AuthProvider>
+        {/* Dashboard Layout */}
+        <Route element={<DashboardLayout />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/vehicles" element={<Vehicles />} />
+          <Route path="/drivers" element={<Drivers />} />
+          <Route path="/trips" element={<Trips />} />
+          <Route path="/maintenance" element={<Maintenance />} />
+          <Route path="/reports" element={<Reports />} />
+        </Route>
 
-<Routes>
-
-<Route path="/" element={<Login/>}/>
-
-<Route element={<DashboardLayout/>}>
-
-<Route path="/dashboard" element={<Dashboard/>}/>
-
-<Route path="/vehicles" element={<Vehicles/>}/>
-
-<Route path="/drivers" element={<Drivers/>}/>
-
-<Route path="/trips" element={<Trips/>}/>
-
-<Route path="/maintenance" element={<Maintenance/>}/>
-
-<Route path="/reports" element={<Reports/>}/>
-
-</Route>
-
-</Routes>
-
-</AuthProvider>
-
-)
-
+        {/* Redirect unknown routes */}
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+    </>
+  );
 }
 
 export default App;
