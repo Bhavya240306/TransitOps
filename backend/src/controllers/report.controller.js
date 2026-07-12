@@ -1,4 +1,4 @@
-const reportService = require("../services/report.service");
+const reportService = require("../services/report.services");
 const { success } = require("../utils/apiResponse");
 
 async function getReports(req, res, next) {

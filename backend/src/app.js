@@ -13,13 +13,9 @@ const errorHandler = require('./middleware/errorHandler');
 
 const app = express();
 
-const reportRoutes = require("./routes/report.routes");
-const dashboardRoutes = require("./routes/dashboard.routes");
-
-
-app.use("/api/reports", reportRoutes);
-app.use("/api/dashboard", dashboardRoutes);
-
+// Order matters: CORS/body-parsing/logging must run before any route
+// handlers, or requests to those routes arrive with no parsed req.body
+// and no CORS headers.
 app.use(cors({ origin: process.env.CORS_ORIGIN || '*' }));
 app.use(express.json());
 app.use(morgan(process.env.NODE_ENV === 'development' ? 'dev' : 'combined'));
