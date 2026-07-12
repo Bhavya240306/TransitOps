@@ -1,5 +1,4 @@
-// backend/src/utils/jwt.js
-//
+
 // Issues and verifies JWTs. The token payload only ever carries
 // { id, role } — never the password hash or other sensitive fields —
 // since the payload is base64-decodable by anyone holding the token.

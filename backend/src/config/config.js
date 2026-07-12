@@ -1,5 +1,4 @@
-// backend/src/config/config.js
-//
+
 // Used ONLY by the sequelize-cli tool (via .sequelizerc) when running
 // `npm run migrate` / `npm run seed` from the terminal. This is separate
 // from database.js, which is the connection the running app actually uses.

@@ -1,5 +1,4 @@
-// backend/src/models/User.js
-//
+
 // Represents a login account. Every role (Fleet Manager, Driver, Safety
 // Officer, Financial Analyst) is a User row distinguished by `role`.
 // A Driver's operational profile (license, safety score, etc.) lives in a

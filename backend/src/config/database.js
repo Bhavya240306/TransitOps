@@ -1,5 +1,4 @@
-// backend/src/config/database.js
-//
+
 // Creates and exports the single Sequelize instance used across the whole
 // backend. Every model file (src/models/*.js) imports this same instance,
 // so there is only ever one connection pool to MySQL.

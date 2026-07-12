@@ -1,5 +1,4 @@
-// backend/src/migrations/20260712000001-create-users.js
-//
+
 // Creates the users table in MySQL. Run with: npm run migrate
 
 module.exports = {

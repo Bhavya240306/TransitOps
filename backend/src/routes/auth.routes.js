@@ -1,5 +1,4 @@
-// backend/src/routes/auth.routes.js
-//
+
 // Pure route -> controller wiring. No logic here.
 
 const express = require('express');

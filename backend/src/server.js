@@ -1,5 +1,4 @@
-// backend/src/server.js
-//
+
 // Actual entry point (this is what `npm run dev` runs). Verifies the DB
 // connection is alive BEFORE accepting any HTTP traffic, so a bad
 // DB_PASSWORD fails immediately and loudly instead of showing up as a

@@ -1,5 +1,4 @@
-// backend/src/middleware/auth.middleware.js
-//
+
 // Protects any route it's attached to. Verifies the Bearer token, then
 // attaches the decoded { id, role } to req.user for downstream
 // controllers/middleware (like role.middleware.js) to use.

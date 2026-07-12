@@ -1,5 +1,4 @@
-// backend/src/middleware/role.middleware.js
-//
+
 // Restricts a route to specific roles. Must run AFTER auth.middleware,
 // since it reads req.user.role that auth.middleware sets.
 //

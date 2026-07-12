@@ -1,5 +1,4 @@
-// backend/src/middleware/errorHandler.js
-//
+
 // Last middleware in the chain (registered in app.js after all routes).
 // Catches anything thrown or passed to next(err), including raw Sequelize
 // errors, and turns them into the same clean { success, error } shape

@@ -1,5 +1,4 @@
-// backend/src/seeders/20260712000002-demo-fleet-manager.js
-//
+
 // Seeds the one Fleet Manager account. This bypasses auth.service's
 // signup rule intentionally, since Fleet Manager is admin-provisioned,
 // not self-registered. Run with: npm run seed

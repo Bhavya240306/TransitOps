@@ -1,5 +1,4 @@
-// backend/src/services/auth.service.js
-//
+
 // Holds the actual signup/login logic, kept separate from the controller
 // so it stays testable and reusable (e.g. the seeder also creates users,
 // but goes straight to the model since it needs to bypass the "no

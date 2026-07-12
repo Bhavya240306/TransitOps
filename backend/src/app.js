@@ -1,5 +1,4 @@
-// backend/src/app.js
-//
+
 // Configures the Express app: global middleware, route mounting, and the
 // error handler (must stay LAST). server.js imports this and starts it
 // listening — kept separate so the app itself can be imported by tests

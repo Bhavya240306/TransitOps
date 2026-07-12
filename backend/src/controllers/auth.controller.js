@@ -1,5 +1,4 @@
-// backend/src/controllers/auth.controller.js
-//
+
 // Thin layer: parses the request, calls auth.service, shapes the
 // response. No business logic here — that all lives in the service.
 
