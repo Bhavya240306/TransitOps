@@ -11,7 +11,7 @@ export default function DashboardLayout() {
 
             <Sidebar />
 
-            <div className="ml-64 flex-1 min-h-screen bg-gray-100">
+            <div className="ml-64 flex-1 min-h-screen bg-gradient-to-br from-slate-100 to-blue-50 dark:from-slate-950 dark:to-slate-900">
 
                 <Navbar />
 

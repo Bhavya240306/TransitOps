@@ -3,7 +3,7 @@ import { Bell, UserCircle } from "lucide-react";
 export default function Navbar() {
     return (
 
-        <header className="h-16 bg-white shadow flex justify-between items-center px-8">
+        <header className="h-16 backdrop-blur-xl bg-white/70 dark:bg-slate-900/70 border-b flex justify-between items-center px-8">
 
             <div>
 
