@@ -16,7 +16,7 @@ export default function Vehicles() {
 
             const res=await api.get("/vehicles");
 
-            setVehicles(res.data);
+            setVehicles(res.data.data || []);
 
         }catch(err){
 
