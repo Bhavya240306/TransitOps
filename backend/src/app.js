@@ -13,6 +13,13 @@ const errorHandler = require('./middleware/errorHandler');
 
 const app = express();
 
+const reportRoutes = require("./routes/report.routes");
+const dashboardRoutes = require("./routes/dashboard.routes");
+
+
+app.use("/api/reports", reportRoutes);
+app.use("/api/dashboard", dashboardRoutes);
+
 app.use(cors({ origin: process.env.CORS_ORIGIN || '*' }));
 app.use(express.json());
 app.use(morgan(process.env.NODE_ENV === 'development' ? 'dev' : 'combined'));
