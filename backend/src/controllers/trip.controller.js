@@ -140,7 +140,19 @@ async function getById(req, res, next) {
   }
 }
 
+async function refuel(req, res, next) {
+  try {
+    const { liters, costAmount } = req.body;
+    if (liters == null) return error(res, 'liters is required', 400, 'MISSING_FIELDS');
+    const log = await fuelLogService.logMidTripRefuel(req.params.id, req.driverId, { liters, costAmount });
+    return success(res, log, 201);
+  } catch (err) {
+    next(err);
+  }
+}
+
 module.exports = {
   create, recommend, requestNextBest, approve, alcoholCheck, respond,
   start, postLocation, getLocation, complete, cancel, list, getById,
+  refuel,
 };

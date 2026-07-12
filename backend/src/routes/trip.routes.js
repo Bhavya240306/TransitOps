@@ -23,5 +23,6 @@ router.post('/:id/start', requireRole('DRIVER'), resolveDriver, controller.start
 router.post('/:id/location', requireRole('DRIVER'), resolveDriver, controller.postLocation);
 router.get('/:id/location', controller.getLocation);
 router.post('/:id/complete', requireRole('DRIVER'), resolveDriver, controller.complete);
+router.post('/:id/refuel', requireRole('DRIVER'), resolveDriver, controller.refuel);
 
 module.exports = router;

@@ -13,3 +13,19 @@ async function getReports(req, res, next) {
 module.exports = {
     getReports,
 };
+
+const { Parser } = require("json2csv");
+const reportService = require("../services/report.services");
+
+async function exportCsv(req, res, next) {
+  try {
+    const data = await reportService.getReports();
+    const parser = new Parser({ fields: ["month", "fuelUsed"] });
+    const csv = parser.parse(data.monthlyCost);
+    res.header("Content-Type", "text/csv");
+    res.attachment("transitops-report.csv");
+    return res.send(csv);
+  } catch (err) {
+    next(err);
+  }
+}

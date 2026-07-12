@@ -16,7 +16,7 @@ async function getDashboard() {
 
     const maintenanceVehicles = await Vehicle.count({
         where: {
-            status: "IN_SHOP",
+            status: "MAINTENANCE",
         },
     });
 
