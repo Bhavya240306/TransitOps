@@ -95,16 +95,11 @@ type="number"
 
 className="w-full border p-3 rounded"
 
-onChange={(e)=>
-
-setData({
-
-...data,
-
-maxLoadCapacity:e.target.value
-
-})
-
+onChange={(e) =>
+  setData({
+    ...data,
+    capacityKg: e.target.value
+  })
 }
 
 />
